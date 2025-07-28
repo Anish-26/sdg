@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sustainable Development Awareness</title>
+  <link rel="stylesheet" href="styles.css" />
+ </head>
+ <script>
+  window.onload = function() {
+    const lastScore = localStorage.getItem("lastSDGQuizScore");
+    if (lastScore !== null) {
+document.getElementById("result").innerText = `Your last score was: ${lastScore}/8`;
+    }
+  };
+ </script>
+ <body>
+  <header>
+    <h1>Sustainable Development Goals</h1>
+    <p>Creating a better world for everyone</p>
+  </header>
+  <div class="container">
+    <section class="video">
+      <h2>What is Sustainable Development?</h2>
+      <h1>Know about Sustainable Development Goals</h1>
+     <center> <button onclick="window.open('https://www.youtube.com/watch?v=7dzFbP2AgFo', '_blank')">Watch on YouTube</button></center>
+
+    </section>
+    <section class="gallery">
+      <center><h2>Gallery: Sustainable Development Goals</h2></center>
+      <div class="gallery-image">
+        <img src="sdg_1.jpg" alt="SDG Goals 1" style="width:300px; height:auto;">
+      </div>
+      <div class="gallery-image">
+        <img src="sdg_2.jpg" alt="SDG Wheel">
+      </div>
+      <div class="gallery-image">
+        <img src="sdg_3.jpg" alt="All SDG Poster">
+      </div>
+    </section>
+    <div id="quiz-container">
+  <div id="question-container"></div>
+  <button id="next-btn" onclick="nextQuestion()" style="display:none;">Next</button>
+  <div class="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <p id="result"></p>
+  <div id="tree-animation" style="display:none;">
+  <div class="animation-bg">
+    <div class="sun"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="grass"></div>
+    <div class="tree">
+      <div class="trunk"></div>
+      <div class="leaves"></div>
+    </div>
+    <p class="plant-text">Plant a tree 🌳</p>
+  </div>
+</div>
+</div>
+ </section>
+ </div>
+ <script src="script.js"></script>
+ </body>
+ </html>
